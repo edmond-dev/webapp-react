@@ -1,0 +1,45 @@
+[{
+     "id":"1",
+     "sku":"2",
+     "name":"carrots",
+     "desc":"fresh carrots"
+    },
+    {
+      "id":"2",
+     "sku":"3",
+     "name":"apple",
+     "desc":"fresh apples straight from the garden"
+
+    },
+     {"id":"3",
+     "sku":"4",
+     "name":"oranges",
+     "desc":"very orange oranges"
+
+    },
+     {"id":"4",
+     "sku":"5",
+     "name":"bananas",
+     "desc":"yellow bananas"
+
+    },
+     {"id":"5",
+     "sku":"6",
+     "name":"pear",
+     "desc":"fresh pears"
+
+    },
+     {"id":"6",
+     "sku":"7",
+     "name":"mango",
+     "desc":"ripe fresh mangos"
+
+    },
+     {"id":"7",
+     "sku":"8",
+     "name":"guavas",
+     "desc":"green fresh guavas from somewhere"
+
+    }
+
+]

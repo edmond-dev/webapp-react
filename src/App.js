@@ -1,21 +1,11 @@
 import './App.css';
-import {useEffect, useState} from "react";
-import axios from "axios";
+import {useState} from "react";
 
-  const url = "http://127.0.0.1:8000/products"
 function App() {
-    // eslint-disable-next-line no-undef
-    const [products, setProducts] = useState([]);
-    const [error, setError] = useState(false)
-
-    // eslint-disable-next-line no-undef
-     useEffect(() => {
-    axios.get(url).then((response) => {
-      setProducts(response.data);
-    }).catch(e => setError(e));
-  }, []);
-
-    console.log(error)
+    const data = require("./data.json")
+    data.map((v) => (
+         console.log(v)
+     ))
   const home = () => (
     <div className="App">
       <header className="App-header">
@@ -29,12 +19,15 @@ function App() {
                 <div className="products-display">
                     <div className="products-display-title">Buy from a select of products</div>
                         <div className="grid-product-display">
-                            {products.map((p) =>(
+                            {data.map((p) =>(
                                 <div className="product-container">
                                     <div className="product">
-                                        <div>{p.id}</div>
-                                        <div>{p.name}</div>
+                                        <div className="image">Product Image</div>
+                                        <div className="product-details">Product Details</div>
+                                        <div> {p.id}</div>
+                                        <div> {p.name}</div>
                                         <div>{p.desc}</div>
+                                        <div className="view-product">buy</div>
                                     </div>
                                 </div>
                             ))}
@@ -46,6 +39,7 @@ function App() {
             <div className="footer-container">
                     <div className="footer-main">
                         <div> Copyright 2022. Senior year project.</div>
+                        <div>By Edmond Mumwensi</div>
                         <div>The College of Idaho</div>
                     </div>
                 </div>
