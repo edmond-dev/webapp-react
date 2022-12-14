@@ -1,8 +1,7 @@
-### This project is UI for the webapp application for CSC-480 cource of my senior year. Its a two pages react app. The first page displays products, which are products from data json in the source folder. The other page will display search results.
+#### This project is a UI for the webapp application for CSC-480 cource, my senior year project. This react UI has two functionality. The first functionality displays products, which are products from src/data.json. The other functionality is filtering through products and display found products.
 
-In the project directory, you can run:
+Once cloned, in the project directory, you can run:
 
 ### `npm start`
 
-### Test data is in the source folder.
 
