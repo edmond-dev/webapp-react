@@ -2,10 +2,13 @@ import './App.css';
 import {useState} from "react";
 
 function App() {
+    // import test data
     const data = require("./data.json")
-    data.map((v) => (
-         console.log(v)
-     ))
+
+    const [search, setSearch] = useState('')
+    console.log(search)
+
+
   const home = () => (
     <div className="App">
       <header className="App-header">
@@ -13,13 +16,16 @@ function App() {
       </header>
         <main>
             <div className="search-bar-container">
-                <div className="search-bar"><input name="searchProduct" type={"text"} placeholder={'search products'}/></div>
+                <div className="search-bar"><input type={"text"} onChange={e => setSearch(e.target.value)} placeholder={'search products'}/></div>
             </div>
             <div className="products-display-container">
                 <div className="products-display">
                     <div className="products-display-title">Buy from a select of products</div>
                         <div className="grid-product-display">
-                            {data.map((p) =>(
+                            {data.filter(item =>{
+                                return search.toLowerCase() === ''
+                                ? item : item.name.toLowerCase().includes(search)
+                            }).map((p) =>(
                                 <div className="product-container">
                                     <div className="product">
                                         <div className="image">Product Image</div>
