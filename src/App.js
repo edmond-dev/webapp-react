@@ -7,8 +7,6 @@ function App() {
     // The get products rest api would be hooked here.
 
     const [search, setSearch] = useState('')
-    console.log(search)
-
 
   const home = () => (
     <div className="App">
