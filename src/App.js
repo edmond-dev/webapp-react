@@ -4,6 +4,7 @@ import {useState} from "react";
 function App() {
     // import test data
     const data = require("./data.json")
+    // The get products rest api would be hooked here.
 
     const [search, setSearch] = useState('')
     console.log(search)
